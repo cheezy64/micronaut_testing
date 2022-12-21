@@ -1,0 +1,16 @@
+micronaut:
+  server:
+    host: 0.0.0.0
+    port: 34242
+
+    # Prevent Agent to Datasource Proxy WebSocket disconnections due to an idle connection
+    #  https://stackoverflow.com/a/62340391/2157961
+    idle-timeout: -1m
+    read-idle-timeout: -1m
+    write-idle-timeout: -1m
+  application:
+    name: demowebsocket
+netty:
+  default:
+    allocator:
+      max-order: 3
